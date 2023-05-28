@@ -1,9 +1,252 @@
 @charset "UTF-8";
+
 /* ページ内リンクの位置調整 */
 section {
-  margin-top: -60px;
+  margin-top: 0px;
   padding-top: 60px;
 }
+
 a {
-  text-decoration:none;
+  text-decoration: none;
+}
+
+.main-pic {
+  margin-top: -8px;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pic {
+  background-position: center;
+  width: 95%;
+  height: 95%;
+}
+
+/* フォント */
+p {
+  font-family: "M PLUS 1c";
+  font-size: 22px;
+}
+
+.font-aisatu {
+  font-family: "M PLUS Rounded 1c";
+  font-size: 24px;
+}
+
+/* 背景テンプレ */
+.bg-sea {
+  /* background-color: aqua; */
+  /* background: linear-gradient(#0420BF, #8CF3D8); */
+  /* background-color: #0093E9;
+  background-image: linear-gradient(164deg, #0093E9 11%, #8cf3d8 100%); */
+  background-color: #25c9f0;
+  background-image: linear-gradient(180deg, #25c9f0 11%, #81f4d5 100%);
+
+
+
+}
+
+.text-sea {
+  font-family: Meiryo, "Hiragino Kaku Gothic Pro W3", Courier New, sans-serif;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.bg-sand {
+  /* background-color: bisque; */
+  /* background: linear-gradient(#F4DFC2, #e0cdb2); */
+  /* background-color: #f6eddc;
+background-image: linear-gradient(180deg, #f6eddc 30%, #fbbb88 100%); */
+  background-color: #fdbd88;
+  background-image: linear-gradient(176deg, #fdbd88 0%, #f7686a 100%);
+
+
+
+}
+
+.text-sand {
+  color: #e7e5dc;
+}
+
+/* ナビゲーションバーの外枠を消す */
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn4 {
+  position: relative;
+  /*ボタン内側の基点となるためrelativeを指定*/
+  background: #30313a;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn4 span {
+  display: inline-block;
+  transition: all .4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 2px;
+  border-radius: 5px;
+  background: #fff;
+  width: 45%;
+}
+
+
+.openbtn4 span:nth-of-type(1) {
+  top: 13px;
+}
+
+.openbtn4 span:nth-of-type(2) {
+  top: 19px;
+}
+
+.openbtn4 span:nth-of-type(3) {
+  top: 25px;
+}
+
+.openbtn4 span:nth-of-type(3)::after {
+  content: "Menu";
+  /*3つ目の要素のafterにMenu表示を指定*/
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  color: #fff;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+/*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+.openbtn4.active span:nth-of-type(1) {
+  top: 14px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn4.active span:nth-of-type(3) {
+  top: 26px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+.openbtn4.active span:nth-of-type(3)::after {
+  content: "Close";
+  /*3つ目の要素のafterにClose表示を指定*/
+  transform: translateY(0) rotate(-45deg);
+  top: 5px;
+  left: 4px;
+}
+
+h2 {
+  position: relative;
+  padding: 1rem 1.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2::before,
+h2::after {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  content: '';
+}
+
+h2::before {
+  border-left: solid 3px;
+  border-top: solid 3px;
+  border-radius: 5px 0 0 0;
+  top: 0;
+  left: 0;
+}
+
+h2::after {
+  border-right: solid 3px;
+  border-bottom: solid 3px;
+  border-radius: 0 0 5px 0;
+  bottom: 0;
+  right: 0;
+}
+
+h3 {
+  position: relative;
+  padding: 1rem 0.25rem;
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+/* box */
+.box7 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #474747;
+  background: whitesmoke;
+  /*背景色*/
+  border-left: double 7px #4ec4d3;
+  /*左線*/
+  border-right: double 7px #4ec4d3;
+  /*右線*/
+}
+
+.box7 p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+/* button */
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1.0em 2.0em;
+  text-decoration: none;
+  color: #00BCD4;
+  background: #ECECEC;
+  transition: .4s;
+}
+
+.btn-flat-simple a {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.btn-flat-simple:hover {
+  background: #00bcd4;
+  color: white;
+}
+
+.btn-flat-simple-tweet {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 1.0em 2.0em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #00BCD4;
+  transition: .4s;
+}
+
+.btn-flat-simple-tweet a {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.btn-flat-simple-tweet:hover {
+  background: white;
+  color: #00bcd4;
 }
